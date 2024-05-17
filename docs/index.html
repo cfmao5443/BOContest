@@ -8,13 +8,13 @@
   </style>
 </head>
 <body>
-  <h1>雙參數化工製程優化</h1>
-  <p>本網頁模擬一個含有兩個溫度參數的化工製程，溫度Ａ及溫度Ｂ分別控制製程兩個單元的溫度，溫度範圍介於300 K至450 K之間。模擬結果為製程每日排放的二氧化碳總量。</p>
+  <h1 style="font-size: 30px; font-family: '標楷體'; font-weight: bold;">雙參數化工製程優化</h1>
+  <p style="font-size: 24px; font-family: '標楷體';">本網頁模擬一個含有兩個溫度參數的化工製程，溫度Ａ及溫度Ｂ分別控制製程兩個單元的溫度，溫度範圍介於300 K至450 K之間。模擬結果為製程每日排放的二氧化碳總量。</p>
   <form id="inputForm">
-    <label for="溫度A">Feature 1:</label>
-    <input type="number" id="feature1" name="feature1">&nbsp;&nbsp;K<br><br>
-    <label for="溫度B">Feature 2:</label>
-    <input type="number" id="feature2" name="feature2">&nbsp;&nbsp;K<br><br>
+    <label for="溫度A" style="font-size: 24px; font-family: '標楷體';">Feature 1:</label>
+    <input type="number" id="feature1" name="feature1">  K<br><br>
+    <label for="溫度B" style="font-size: 24px; font-family: '標楷體';">Feature 2:</label>
+    <input type="number" id="feature2" name="feature2">  K<br><br>
     <button type="button" onclick="calculate()">Calculate</button>
   </form>
   <div id="result"></div>
@@ -29,7 +29,7 @@
       var result = braninEquation(feature1, feature2);
 
       // 显示结果
-      document.getElementById('result').innerHTML = 'Target value: ' + result.toFixed(2) + 'ton/day';
+      document.getElementById('result').innerHTML = 'Target value: ' + result.toFixed(2) + '  ton/day';
     }
 
     // Branin 方程式计算函数

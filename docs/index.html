@@ -5,25 +5,31 @@
   <style>
     body {
       background-image: url('bkg_plant.png');
-      background-color: rgba(255, 0, 0, 0.2); /* 半透明 */
+      background-color: rgba(255, 255, 255, 0.2); /* 半透明 */
       background-size: cover; /* 使背景图片覆盖整个页面 */
-      background-position: bottom; /* 使背景图片居中 */
+      background-position: center; /* 使背景图片居中 */
       background-repeat: no-repeat; /* 使背景图片不重复 */
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.7); /* 白色半透明 */
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <h1 style="font-size: 30px; font-family: '標楷體'; font-weight: bold;">雙參數化工製程優化</h1>
-  <p style="font-size: 24px; font-family: '標楷體';">本網頁模擬一個含有兩個溫度參數的化工製程，溫度Ａ及溫度Ｂ分別控制製程兩個單元的溫度，溫度範圍介於300 K至450 K之間。</p>
-  <p style="font-size: 24px; font-family: '標楷體';">模擬結果為製程每日排放的二氧化碳總量。</p>
-  <form id="inputForm">
-    <label for="feature1" style="font-size: 24px; font-family: '標楷體';">溫度A:</label>
-    <input type="number" id="feature1" name="feature1">  K<br><br>
-    <label for="feature2" style="font-size: 24px; font-family: '標楷體';">溫度B:</label>
-    <input type="number" id="feature2" name="feature2">  K<br><br>
-    <button type="button" onclick="calculate()">Calculate</button><br><br>
-  </form>
-  <div id="result" style="font-size: 24px; font-family: '標楷體';"></div>
+  <div class="overlay">
+    <h1 style="font-size: 30px; font-family: '標楷體'; font-weight: bold;">雙參數化工製程優化</h1>
+    <p style="font-size: 24px; font-family: '標楷體';">本網頁模擬一個含有兩個溫度參數的化工製程，溫度Ａ及溫度Ｂ分別控制製程兩個單元的溫度，溫度範圍介於300 K至450 K之間。</p>
+    <p style="font-size: 24px; font-family: '標楷體';">模擬結果為製程每日排放的二氧化碳總量。</p>
+    <form id="inputForm">
+      <label for="feature1" style="font-size: 24px; font-family: '標楷體';">溫度A:</label>
+      <input type="number" id="feature1" name="feature1">  K<br><br>
+      <label for="feature2" style="font-size: 24px; font-family: '標楷體';">溫度B:</label>
+      <input type="number" id="feature2" name="feature2">  K<br><br>
+      <button type="button" onclick="calculate()">Calculate</button><br><br>
+    </form>
+    <div id="result" style="font-size: 24px; font-family: '標楷體';"></div>
+  </div>
 
   <script>
     function calculate() {
